@@ -1,0 +1,9 @@
+.hovercard {
+    margin-top: 1.5rem;
+    background-color: white;
+    border: 1px solid lightslategrey;
+    border-radius: 10px;
+    position: absolute;
+    padding: 10px;
+    max-width: 40%;
+}
