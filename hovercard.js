@@ -1,8 +1,7 @@
 // comment out this variable to add your own hovercards
-var hovercards = {
-    "https://www.w3.org/community/sustyweb/": {"title": "Sustainable Web Design Community Group", "A community group 
-dedicated to creating sustainable websites. This group will not publish specifications." }
-  };
+// var hovercards = {
+//     "https://www.w3.org/community/sustyweb/": {"title": "Sustainable Web Design Community Group", "A community group dedicated to creating sustainable websites. This group will not publish specifications." }
+//   };
   
   var article = document.getElementsByTagName("article");
 
@@ -11,10 +10,11 @@ dedicated to creating sustainable websites. This group will not publish specific
   }
 
   function hover (target_link) {
-    if (hovercards[target_link]) {
+    var hovercard_data = hovercards[target_link.href.replace(/\/+$/, "")];
+    if (hovercard_data) {
       var new_box = document.createElement("div");
       new_box.classList.add("hovercard");
-      new_box.innerHTML = hovercards[target_link];
+      new_box.innerHTML = "<strong>" + hovercard_data["title"] + "</strong><p>" + hovercard_data["description"] + "</p>";
       new_box.style.top = window.scrollY + target_link.getBoundingClientRect().top + "px";
       new_box.style.left = window.scrollX + target_link.getBoundingClientRect().left + "px";
       new_box.id = "tooltip";
@@ -48,3 +48,4 @@ dedicated to creating sustainable websites. This group will not publish specific
       unhover(this);
     });
   }
+
