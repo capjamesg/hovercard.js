@@ -15,20 +15,24 @@ When a user hovers off the link or moves focus onto another element (i.e. by usi
 ## Usage
 
 To use the hovercard script, first download a copy and upload it to your site. Then, add this code above the closing `</body>` tag on your web page:
-    
-    <script src="./path/to/hovercard.js"></script>
+
+```html
+<script src="./path/to/hovercard.js"></script>
+```
 
 Substitute the path of the script in the example above with the location of the script on your site.
 
 You should add a JSON object to every page that contains a hovercard. This JSON object should use the following structure:
 
-    {
-        "https://example.com": {
-            "title": "Example Domain",
-            "description": "This domain is used for examples."
-            "photo": "https://example.com/example.png"
-        }
+```json
+{
+    "https://example.com": {
+        "title": "Example Domain",
+        "description": "This domain is used for examples."
+        "photo": "https://example.com/example.png"
     }
+}
+```
 
 Keys in the JSON object represent links on the page to look up. The only required key value is `title`. If a description and/or photo are provided, these will be included in the hovercard.
 
