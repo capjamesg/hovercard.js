@@ -12,6 +12,12 @@ The `hovercard.js` script searches for all `<a>` tags enclosed within an `<artic
 
 When a user hovers off the link or moves focus onto another element (i.e. by using the keyboard to navigate links on the page), the hovercard will disappear.
 
+Here are a few articles with hovercards:
+
+- https://jamesg.blog/2023/04/02/timehop-for-blogs/
+- https://jamesg.blog/2023/05/06/llms-open-source/
+- https://jamesg.blog/2023/05/19/airport-pianos/
+
 ## Usage
 
 To use the hovercard script, first download a copy and upload it to your site. Then, add this code above the closing `</body>` tag on your web page:
